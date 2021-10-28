@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.textView2).text = tekst1;
         }
         findViewById<Button>(R.id.button).setOnClickListener {
-            var tekst2 = findViewById<TextInputEditText>(R.id.pole).toString();
-            var tekst1 = findViewById<TextInputEditText>(R.id.pole).toString();
+            var tekst1 = findViewById<TextInputEditText>(R.id.pole).text.toString();
+            var tekst2 = findViewById<TextInputEditText>(R.id.pole2).text.toString();
             findViewById<TextView>(R.id.textView2).text = tekst1 + tekst2;
         }
     }
