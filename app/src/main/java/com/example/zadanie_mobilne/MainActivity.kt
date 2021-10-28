@@ -12,7 +12,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import com.example.zadanie_mobilne.databinding.ActivityMainBinding
-import com.google.android.material.textfield.TextInputLayout
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,10 +38,14 @@ class MainActivity : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.button_first).setOnClickListener{
-            var tekst1 = findViewById<TextInputLayout>(R.id.pole1).toString();
+            var tekst1 = findViewById<TextInputEditText>(R.id.pole).toString();
             findViewById<TextView>(R.id.textView2).text = tekst1;
         }
-
+        findViewById<Button>(R.id.button).setOnClickListener {
+            var tekst2 = findViewById<TextInputEditText>(R.id.pole).toString();
+            var tekst1 = findViewById<TextInputEditText>(R.id.pole).toString();
+            findViewById<TextView>(R.id.textView2).text = tekst1 + tekst2;
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
