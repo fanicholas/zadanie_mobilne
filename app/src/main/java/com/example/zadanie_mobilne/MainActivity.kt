@@ -9,7 +9,10 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import com.example.zadanie_mobilne.databinding.ActivityMainBinding
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +35,13 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+
+        findViewById<Button>(R.id.button_first).setOnClickListener{
+            var tekst1 = findViewById<TextInputLayout>(R.id.pole1).toString();
+            findViewById<TextView>(R.id.textView2).text = tekst1;
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
